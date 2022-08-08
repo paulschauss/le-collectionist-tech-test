@@ -1,0 +1,11 @@
+Hello from the index view of the shops controller!
+
+<h1>Shops</h1>
+
+<%= link_to "Create", new_shop_path %>
+
+<ul>
+  <% @shops.each do |shop| %>
+    <li><%= link_to shop.name, shop_path(shop) %></li>
+  <% end %>
+</ul>
