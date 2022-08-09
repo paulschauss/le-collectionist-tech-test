@@ -1,9 +1,8 @@
 <%= simple_form_for [shop, slot] do |f| %>
   <%= f.input :day, collection: Slot::AUTORIZED_DAYS %>
-  <%= f.input :start_hour, as: :time %>
-  <%= f.input :end_hour, as: :time %>
-  <label for="appt">Choose a time for your meeting:</label>
-  <input type="time" id="appt" name="appt"
-       min="09:00" max="18:00" required>
+  <%= f.input :start_hour, collection: Slot::AUTORIZED_HOURS %>
+  <%= f.input :start_minute, collection: Slot::AUTORIZED_MINUTES %>
+  <%= f.input :end_hour, collection: Slot::AUTORIZED_HOURS %>
+  <%= f.input :end_minute, collection: Slot::AUTORIZED_MINUTES %>
   <%= f.submit %>
 <% end %>
