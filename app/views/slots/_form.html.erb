@@ -4,13 +4,5 @@
   <%= f.input :start_minute %>
   <%= f.input :end_hour %>
   <%= f.input :end_minute %>
-  <%= f.submit "Submit slot" %>
+  <%= f.submit %>
 <% end %>
-
-<ul>
-  <% @shop.slots.each do |slot| %>
-    <li>
-      <%= slot.day %> : <%= slot.start_hour %>h<%= slot.start_minute %> à <%= slot.end_hour %>h<%= slot.end_minute %>
-    </li>
-  <% end %>
-</ul>
