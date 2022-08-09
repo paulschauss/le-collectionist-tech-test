@@ -13,6 +13,11 @@ class Slot < ApplicationRecord
   validate :start_hour_is_before_end_hour
   # validate :slot_is_not_overlapping_with_other_slots
 
+  def self.days
+    today_index = AUTORIZED_DAYS.find_index(Time.now.strftime("%A"))
+    days = AUTORIZED_DAYS.rotate(today_index)
+  end
+
   private
 
   def start_hour_is_before_end_hour
