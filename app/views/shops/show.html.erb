@@ -2,13 +2,12 @@
   <%= t ".name_shop_html", name: @shop.name %>
 </h1>
 <ul>
-  <p><%= t ".slots" %>:</p>
-  <% Slot.days.each do |day| %>
-    <li>
-      <%= day %>:
-      <% @shop.slots.each do |slot| %>
-        <%= display_slot(slot) if day == slot.day %>
-      <% end %>
+  <% Slot.days.each_with_index do |day, index| %>
+    <li class="<%= 'fw-bold' if index == 0 %>">
+        <%= day %>:
+        <% @shop.slots.each_with_index do |slot, index| %>
+          <%= display_slot(slot) if day == slot.day %>
+        <% end %>
     </li>
   <% end %>
 </ul>
