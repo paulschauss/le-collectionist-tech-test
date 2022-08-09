@@ -1,7 +1,7 @@
 <h1><%= @shop.name %></h1>
 <ul>
   <% @shop.slots.each do |slot| %>
-    <li><%= slot.day %> : <%= slot.start_time %> à <%= slot.end_time %></li>
+    <li><%= slot.day %> : <%= slot.start_hour %>h<%= slot.start_minute %> à <%= slot.end_hour %>h<%= slot.end_minute %></li>
   <% end %>
 </ul>
 

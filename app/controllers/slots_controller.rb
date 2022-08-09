@@ -19,6 +19,6 @@ class SlotsController < ApplicationController
   end
 
   def slot_params
-    params.require(:slot).permit(:day, :start_time, :end_time)
+    params.require(:slot).permit(:day, :start_hour, :start_minute, :end_hour, :end_minute)
   end
 end
