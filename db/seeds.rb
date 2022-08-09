@@ -29,3 +29,17 @@ slot8 = Slot.create(day: "Thursday", start_hour: 14, start_minute: 0, end_hour: 
 slot9 = Slot.create(day: "Friday", start_hour: 9, start_minute: 0, end_hour: 12, end_minute: 0, shop: shop1)
 slot10 = Slot.create(day: "Friday", start_hour: 14, start_minute: 0, end_hour: 18, end_minute: 0, shop: shop1)
 p "Created #{Slot.count} slots for Shop 1"
+
+p "Creating slots for shop 2..."
+slot11 = Slot.create(day: "Wednesday", start_hour: 10, start_minute: 30, end_hour: 15, end_minute: 0, shop: shop2)
+slot12 = Slot.create(day: "Wednesday", start_hour: 17, start_minute: 00, end_hour: 20, end_minute: 0, shop: shop2)
+slot13 = Slot.create(day: "Thursday", start_hour: 10, start_minute: 30, end_hour: 15, end_minute: 0, shop: shop2)
+slot14 = Slot.create(day: "Thursday", start_hour: 17, start_minute: 00, end_hour: 20, end_minute: 0, shop: shop2)
+slot15 = Slot.create(day: "Friday", start_hour: 10, start_minute: 30, end_hour: 15, end_minute: 0, shop: shop2)
+slot16 = Slot.create(day: "Friday", start_hour: 17, start_minute: 00, end_hour: 20, end_minute: 0, shop: shop2)
+slot17 = Slot.create(day: "Saturday", start_hour: 10, start_minute: 30, end_hour: 20, end_minute: 0, shop: shop2)
+slot18 = Slot.create(day: "Monday", start_hour: 10, start_minute: 30, end_hour: 15, end_minute: 0, shop: shop2)
+slot18 = Slot.create(day: "Monday", start_hour: 17, start_minute: 00, end_hour: 20, end_minute: 0, shop: shop2)
+slot19 = Slot.create(day: "Tuesday", start_hour: 10, start_minute: 30, end_hour: 15, end_minute: 0, shop: shop2)
+slot20 = Slot.create(day: "Tuesday", start_hour: 17, start_minute: 00, end_hour: 20, end_minute: 0, shop: shop2)
+p "Created #{Slot.count} slots for Shop 2"
