@@ -1,7 +1,7 @@
 class Slot < ApplicationRecord
   AUTORIZED_DAYS = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].freeze
   AUTORIZED_HOURS = (0..23).freeze
-  AUTORIZE_MINUTES = (0..59)
+  AUTORIZE_MINUTES = (0..59).freeze
 
   belongs_to :shop
 
