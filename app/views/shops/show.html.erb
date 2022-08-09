@@ -2,8 +2,6 @@
   <%= t ".name_shop_html", name: @shop.name %>
 </h1>
 <ul>
-  <p><%= t ".slots" %>:</p>
-  <% count = 0 %>
   <% Slot.days.each_with_index do |day, index| %>
     <li class="<%= 'fw-bold' if index == 0 %>">
         <%= day %>:
