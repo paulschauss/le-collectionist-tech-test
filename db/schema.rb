@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_09_093529) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_09_103030) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,12 +21,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_09_093529) do
   end
 
   create_table "slots", force: :cascade do |t|
-    t.time "start_time"
-    t.time "end_time"
     t.string "day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "shop_id", null: false
+    t.integer "start_hour"
+    t.integer "start_minute"
+    t.integer "end_hour"
+    t.integer "end_minute"
     t.index ["shop_id"], name: "index_slots_on_shop_id"
   end
 
