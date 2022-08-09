@@ -1,3 +1,8 @@
 <h1><%= @shop.name %></h1>
+<ul>
+  <% @shop.slots.each do |slot| %>
+    <li><%= slot.day %> : <%= slot.start.time %> à <%= slot.end.time %></li>
+  <% end %>
+</ul>
 
 <%= link_to "Back", shops_path %>
