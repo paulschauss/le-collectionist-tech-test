@@ -17,6 +17,7 @@ en:
       title: "Here is the list of shops"
     show:
       name_shop_html: "<strong>Name shop:</strong> %{name}"
+      slots: "Slots"
     new:
       title: "Create a new shop"
       name: "Name"
