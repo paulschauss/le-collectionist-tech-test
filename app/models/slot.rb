@@ -11,9 +11,7 @@ class Slot < ApplicationRecord
   validates :shop, presence: true
 
   validate :start_hour_is_before_end_hour
-  validate :slot_is_not_overlapping_with_other_slots
-
-
+  # validate :slot_is_not_overlapping_with_other_slots
 
   private
 
@@ -23,8 +21,4 @@ class Slot < ApplicationRecord
     errors.add(:start_hour, 'must be before end hour')
   end
 
-  def slot_is_not_overlapping_with_other_slots
-    return if shop.slots.where(day: day).where.not(id: id).empty?
-    errors.add(:day, 'is already taken')
-  end
 end
