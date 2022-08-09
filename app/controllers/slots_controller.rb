@@ -8,8 +8,11 @@ class SlotsController < ApplicationController
   def create
     @slot = Slot.new(slot_params)
     @slot.shop = @shop
-    @slot.save
-    redirect_to shop_path(@shop)
+    if @slot.save
+      redirect_to new_shop_slot_path(@shop)
+    else
+      render :new
+    end
   end
 
   private
