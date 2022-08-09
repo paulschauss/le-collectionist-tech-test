@@ -20,5 +20,4 @@ class Slot < ApplicationRecord
     return if start_hour == end_hour && start_minute < end_minute
     errors.add(:start_hour, 'must be before end hour')
   end
-
 end
