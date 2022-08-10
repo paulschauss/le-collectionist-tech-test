@@ -18,16 +18,17 @@ en:
     show:
       name_shop_html: "<strong>Name shop:</strong> %{name}"
       slots: "Slots"
+      no_slots: "Closed"
     new:
       title: "Create a new shop"
       name: "Name"
   slots:
     new:
       title: "Create a new slot for the shop : %{name}"
-    days:
+    show:
       monday: "Monday"
       tuesday: "Tuesday"
-      wednesday: "Wednesday"
+      wednesday: "Toto"
       thursday: "Thursday"
       friday: "Friday"
       saturday: "Saturday"

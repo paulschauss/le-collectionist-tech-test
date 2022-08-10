@@ -3,11 +3,17 @@
 </h1>
 <ul>
   <% Slot.days.each_with_index do |day, index| %>
+    <% slots_by_day = Slot.where(day: day) %>
     <li class="<%= 'fw-bold' if index == 0 %>">
-        <%= day %>:
-        <% @shop.slots.each_with_index do |slot, index| %>
-          <%= display_slot(slot) if day == slot.day %>
+      <%= day %>
+      <% slots_by_day = @shop.slots.where(day: day) %>
+      <% if slots_by_day.any? %>
+        <% slots_by_day.each_with_index do |slot, index| %>
+          <%= ", " if index != 0 %><%= display_slot(slot) %>
         <% end %>
+      <% else %>
+        <%= t ".no_slots" %>
+      <% end %>
     </li>
   <% end %>
 </ul>
