@@ -12,7 +12,11 @@
         <% slots_by_day = @shop.slots.where(day: day) %>
         <% if slots_by_day.any? %>
           <% slots_by_day.each_with_index do |slot, index| %>
+<<<<<<< HEAD
             <%= ", " if index != 0 %><%= display_slot(slot) %>
+=======
+            <%= display_slot(slot) %>
+>>>>>>> cebf5a3d9a40170cb792b668b5ed02a9433fcbb6
           <% end %>
         <% else %>
           <%= t ".no_slots" %>

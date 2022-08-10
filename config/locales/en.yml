@@ -14,7 +14,11 @@ en:
         day: "Day"
   shops:
     index:
+<<<<<<< HEAD
       title: "Here is the list of shop"
+=======
+      title: "Here is the list of shops"
+>>>>>>> cebf5a3d9a40170cb792b668b5ed02a9433fcbb6
       subtitle_html: "<em>I am sure that you will choose Le Collectionist ;)</em>"
     show:
       name_shop_html: "<strong>Name shop:</strong> %{name}"
