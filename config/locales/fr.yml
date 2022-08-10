@@ -1,1 +1,34 @@
 fr:
+  hello: "Bonjour le monde"
+  activerecord:
+    models:
+      shop: "Magasin"
+    attributes:
+      shop:
+        name: "Nom"
+      slot:
+        start_hour: "Heure de début"
+        end_hour: "Heure de fin"
+        start_minute: "Minute de début"
+        end_minute: "Minute de fin"
+        day: "Jour"
+  shops:
+    index:
+      title: "Voici la liste des magasins"
+    show:
+      name_shop_html: "<strong>Nom du magasin:</strong> %{name}"
+      slots: "Créneaux"
+      no_slots: "Fermé"
+      monday: "Lundi"
+      tuesday: "Mardi"
+      wednesday: "Mercredi"
+      thursday: "Jeudi"
+      friday: "Vendredi"
+      saturday: "Samedi"
+      sunday: "Dimanche"
+    new:
+      title: "Créer un nouveau magasin"
+      name: "Nom"
+  slots:
+    new:
+      title: "Créer un nouveau créneau pour le magasin : %{name}"
