@@ -15,9 +15,11 @@ en:
   shops:
     index:
       title: "Here is the list of shops"
+      subtitle_html: "<em>I am sure that you will choose Le Collectionist ;)</em>"
     show:
       name_shop_html: "<strong>Name shop:</strong> %{name}"
       slots: "Slots"
+      shopping_hours: "Shopping hours"
       no_slots: "Closed"
       monday: "Monday"
       tuesday: "Tuesday"
@@ -28,6 +30,7 @@ en:
       sunday: "Sunday"
     new:
       title: "Create a new shop"
+      subtitle_html: "<em>- Don't lie, you first gone on Le Collectionist Show ? If i am Right, you have to make a pun in your shop name !<em>"
       name: "Name"
   slots:
     new:

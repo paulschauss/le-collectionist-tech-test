@@ -10,7 +10,7 @@ p "Seeding database..."
 
 p "Creating shops..."
 shop1 = Shop.create(name: "Shop 1")
-shop2 = Shop.create(name: "Shop 2")
+shop2 = Shop.create(name: "Le Collectionist")
 shop3 = Shop.create(name: "Shop 3")
 shop4 = Shop.create(name: "Shop 4")
 shop5 = Shop.create(name: "Shop 5")

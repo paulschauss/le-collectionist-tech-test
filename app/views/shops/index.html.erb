@@ -1,9 +1,11 @@
 <h1><%= t('hello')%></h1>
-<h2><%= t('.title')%></h2>
-<%= link_to "Create", new_shop_path %>
-
+<div class="d-flex justify-content-between">
+  <h3 class="d-inline col-6"><%= t('.title')%></h3>
+  <%= link_to "Create yours", new_shop_path, class: "btn btn-primary d-inline col-4" %>
+</div>
+  <p><%= t('.subtitle_html')%></p>
 <ul>
   <% @shops.each do |shop| %>
-    <li><%= link_to shop.name, shop_path(shop) %></li>
+    <li class=""><%= link_to shop.name, shop_path(shop) %></li>
   <% end %>
 </ul>
