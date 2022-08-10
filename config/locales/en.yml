@@ -14,7 +14,7 @@ en:
         day: "Day"
   shops:
     index:
-      title: "Here is the list of shop"
+      title: "Here is the list of shops"
       subtitle_html: "<em>I am sure that you will choose Le Collectionist ;)</em>"
     show:
       name_shop_html: "<strong>Name shop:</strong> %{name}"
