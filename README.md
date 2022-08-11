@@ -74,8 +74,8 @@ We’re going to create an app to create shops associated to a scheduler, and de
 - [ ] As a visitor, I can see a shop and consult his shop hours
 - [ ] As a visitor, I can add a shop with shop hours
 
-<!-- If you want to run test locally :
+If you want to run test locally :
 
 ```sh
 $ bundle exec rspec
-``` -->
+```
