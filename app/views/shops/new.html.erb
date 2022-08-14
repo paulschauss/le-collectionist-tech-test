@@ -3,7 +3,7 @@
 <%= render "form", shop: @shop %>
 
 <% @shop.slots.each do |slot| %>
-    <li>
-      <%= slot.day %> : <%= slot.start_hour %>h<%= slot.start_minute %> à <%= slot.end_hour %>h<%= slot.end_minute %>
-    </li>
-  <% end %>
+  <li>
+    <%= slot.day %> : <%= slot.start_hour %>h<%= slot.start_minute %> à <%= slot.end_hour %>h<%= slot.end_minute %>
+  </li>
+<% end %>
