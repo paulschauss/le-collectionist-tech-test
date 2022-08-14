@@ -1,5 +1,16 @@
 en:
+  head:
+    title: "Le Collectionist technical test"
   hello: "Hello world"
+  back: "Back"
+  date:
+    sunday: "Sunday"
+    monday: "Monday"
+    tuesday: "Tuesday"
+    wednesday: "Wednesday"
+    thursday: "Thursday"
+    friday: "Friday"
+    saturday: "Saturday"
   activerecord:
     models:
       shop: "Shop"
@@ -7,31 +18,26 @@ en:
       shop:
         name: "Name"
       slot:
-        start_hour: "Start hour"
-        end_hour: "End hour"
-        start_minute: "Start minute"
-        end_minute: "End minute"
+        star_time: "Start hour"
+        end_time: "End hour"
         day: "Day"
   shops:
     index:
       title: "Here is the list of shop"
       subtitle_html: "<em>I am sure that you will choose Le Collectionist ;)</em>"
+      create_yours: "Create your shop"
     show:
       name_shop_html: "<strong>Name shop:</strong> %{name}"
-      slots: "Slots"
       shopping_hours: "Shopping hours"
+      slots: "Slots"
       no_slots: "Closed"
-      monday: "Monday"
-      tuesday: "Tuesday"
-      wednesday: "Wednesday"
-      thursday: "Thursday"
-      friday: "Friday"
-      saturday: "Saturday"
-      sunday: "Sunday"
     new:
       title: "Create a new shop"
-      subtitle_html: "<em>- Don't lie, you first gone on Le Collectionist Show ? If i am Right, you have to make a pun in your shop name !<em>"
+      subtitle_html: "<em>-Don't lie, you first gone on Le Collectionist Show ? If i am Right, you have to make a pun in your shop name !<em>"
       name: "Name"
   slots:
     new:
       title: "Create a new slot for the shop : %{name}"
+      slots: "Slots"
+      no_slots: "Closed"
+      see_my_shop: "See my shop"
