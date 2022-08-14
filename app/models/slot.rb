@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Slot < ApplicationRecord
-  AUTORIZED_DAYS = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].freeze
+  AUTORIZED_DAYS = Date::DAYNAMES
 
   belongs_to :shop
 
