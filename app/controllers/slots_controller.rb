@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SlotsController < ApplicationController
   before_action :set_shop, only: %i[new create]
 
