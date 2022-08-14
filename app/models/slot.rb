@@ -2,19 +2,15 @@
 
 class Slot < ApplicationRecord
   AUTORIZED_DAYS = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].freeze
-  AUTORIZED_HOURS = (0..23)
-  AUTORIZED_MINUTES = [0, 15, 30, 45].freeze
 
   belongs_to :shop
 
   validates :shop, presence: true
   validates :day, presence: true
   validates :day, inclusion: { in: AUTORIZED_DAYS }
-  validates :start_hour, :end_hour, inclusion: { in: AUTORIZED_HOURS }
-  validates :start_minute, :end_minute, inclusion: { in: AUTORIZED_MINUTES }
 
-  validate :start_hour_is_before_end_hour
-  validate :slot_is_not_overlapping_with_other_slots
+  # validate :start_hour_is_before_end_hour
+  # validate :slot_is_not_overlapping_with_other_slots
 
   def self.days
     today_index = AUTORIZED_DAYS.find_index(Time.now.strftime('%A'))

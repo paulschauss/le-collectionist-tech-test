@@ -1,8 +1,6 @@
 <%= simple_form_for [shop, slot] do |f| %>
   <%= f.input :day, collection: Slot::AUTORIZED_DAYS %>
-  <%= f.input :start_hour, collection: Slot::AUTORIZED_HOURS %>
-  <%= f.input :start_minute, collection: Slot::AUTORIZED_MINUTES %>
-  <%= f.input :end_hour, collection: Slot::AUTORIZED_HOURS %>
-  <%= f.input :end_minute, collection: Slot::AUTORIZED_MINUTES %>
+  <%= f.input :start_time %>
+  <%= f.input :end_time %>
   <%= f.submit %>
 <% end %>
