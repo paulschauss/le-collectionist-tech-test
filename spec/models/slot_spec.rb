@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Slot, type: :model do
@@ -38,8 +40,10 @@ RSpec.describe Slot, type: :model do
 
   it 'should not overlap with other slots' do
     shop = FactoryBot.create(:shop)
-    slot = FactoryBot.create(:slot, shop: shop)
-    slot2 = FactoryBot.build(:slot, shop: shop, day: slot.day, start_hour: slot.start_hour, start_minute: slot.start_minute, end_hour: slot.end_hour, end_minute: slot.end_minute)
+    slot = FactoryBot.create(:slot, shop:)
+    slot2 = FactoryBot.build(:slot, shop:, day: slot.day, start_hour: slot.start_hour,
+                                    start_minute: slot.start_minute,
+                                    end_hour: slot.end_hour, end_minute: slot.end_minute)
     expect(slot2).to_not be_valid
   end
 end

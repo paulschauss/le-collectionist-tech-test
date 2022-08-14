@@ -1,12 +1,13 @@
+# frozen_string_literal: true
+
 class ShopsController < ApplicationController
-  before_action :set_shop, only: [:show, :update]
+  before_action :set_shop, only: %i[show update]
 
   def index
     @shops = Shop.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @shop = Shop.new

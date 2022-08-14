@@ -1,8 +1,10 @@
-require "rails_helper"
+# frozen_string_literal: true
+
+require 'rails_helper'
 
 feature 'visitor' do
   it 'can see the shops' do
-    shop = FactoryBot.create(:shop)
+    FactoryBot.create(:shop)
     visit shops_path
     within 'li' do
       click_on 'Le Collectionist'
@@ -10,7 +12,7 @@ feature 'visitor' do
   end
 
   it 'can see the shops shopping hours' do
-    shop = FactoryBot.create(:shop)
+    FactoryBot.create(:shop)
     visit shops_path
     within 'li' do
       click_on 'Le Collectionist'
@@ -25,7 +27,7 @@ feature 'visitor' do
   end
 
   it 'can see shops who are closed' do
-    shop = FactoryBot.create(:shop)
+    FactoryBot.create(:shop)
     visit shops_path
     within 'li' do
       click_on 'Le Collectionist'
@@ -34,7 +36,7 @@ feature 'visitor' do
   end
 
   it "can first see the day's slot of today" do
-    shop = FactoryBot.create(:shop)
+    FactoryBot.create(:shop)
     visit shops_path
     within 'li' do
       click_on 'Le Collectionist'
@@ -43,7 +45,7 @@ feature 'visitor' do
   end
 
   it "can see the day's slot of today in bold" do
-    shop = FactoryBot.create(:shop)
+    FactoryBot.create(:shop)
     visit shops_path
     within 'li' do
       click_on 'Le Collectionist'

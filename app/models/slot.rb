@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class Slot < ApplicationRecord
   AUTORIZED_DAYS = %w[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].freeze
-  AUTORIZED_HOURS = (0..23).freeze
-  AUTORIZED_MINUTES = [0,15,30,45].freeze
+  AUTORIZED_HOURS = (0..23)
+  AUTORIZED_MINUTES = [0, 15, 30, 45].freeze
 
   belongs_to :shop
 
@@ -15,8 +17,8 @@ class Slot < ApplicationRecord
   validate :slot_is_not_overlapping_with_other_slots
 
   def self.days
-    today_index = AUTORIZED_DAYS.find_index(Time.now.strftime("%A"))
-    days = AUTORIZED_DAYS.rotate(today_index)
+    today_index = AUTORIZED_DAYS.find_index(Time.now.strftime('%A'))
+    AUTORIZED_DAYS.rotate(today_index)
   end
 
   private
@@ -24,9 +26,10 @@ class Slot < ApplicationRecord
   def slot_is_not_overlapping_with_other_slots
     return if shop.nil?
     return if shop.slots.empty?
+
     shop.slots.each do |slot|
       if slot.day == day && (start_hour..end_hour).overlaps?(slot.start_hour..slot.end_hour)
-        errors.add(:start_hour, "Slot is overlapping with another slot")
+        errors.add(:start_hour, 'Slot is overlapping with another slot')
       end
     end
   end
@@ -34,8 +37,6 @@ class Slot < ApplicationRecord
   def start_hour_is_before_end_hour
     return unless start_hour && end_hour
 
-    if start_hour > end_hour
-      errors.add(:start_hour, "must be before end hour")
-    end
+    errors.add(:start_hour, 'must be before end hour') if start_hour > end_hour
   end
 end
