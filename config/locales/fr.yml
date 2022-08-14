@@ -1,5 +1,16 @@
 fr:
+  head:
+    title: "Le Collectionist test technique"
   hello: "Bonjour le monde"
+  back: "Retour"
+  date:
+    sunday: "Dimanche"
+    monday: "Lundi"
+    tuesday: "Mardi"
+    wednesday: "Mercredi"
+    thursday: "Jeudi"
+    friday: "Vendredi"
+    saturday: "Samedi"
   activerecord:
     models:
       shop: "Magasin"
@@ -7,28 +18,26 @@ fr:
       shop:
         name: "Nom"
       slot:
-        start_hour: "Heure de début"
-        end_hour: "Heure de fin"
-        start_minute: "Minute de début"
-        end_minute: "Minute de fin"
+        start_time: "Temps de début"
+        end_time: "Temps de fin"
         day: "Jour"
   shops:
     index:
       title: "Voici la liste des magasins"
+      subtitle_html: "<em>Je suis sûr que vous allez choisir Le Collectionist ;)</em>"
+      create_yours: "Créez votre magasin"
     show:
       name_shop_html: "<strong>Nom du magasin:</strong> %{name}"
+      shopping_hours: "Horaires du magasin"
       slots: "Créneaux"
       no_slots: "Fermé"
-      monday: "Lundi"
-      tuesday: "Mardi"
-      wednesday: "Mercredi"
-      thursday: "Jeudi"
-      friday: "Vendredi"
-      saturday: "Samedi"
-      sunday: "Dimanche"
     new:
       title: "Créer un nouveau magasin"
+      subtitle_html: "<em>-Ne mentez pas, vous avez commencé par aller sur la show Le Collectionist ? Si j'ai raison, vous devez faire un jeu de mot dans le nom du magasin !<em>"
       name: "Nom"
   slots:
     new:
       title: "Créer un nouveau créneau pour le magasin : %{name}"
+      slots: "Créneaux"
+      no_slots: "Fermé"
+      see_my_shop: "Voir mon magasin"
