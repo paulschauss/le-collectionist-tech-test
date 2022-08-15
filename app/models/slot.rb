@@ -6,10 +6,10 @@ class Slot < ApplicationRecord
   belongs_to :shop
 
   validates :shop, presence: true
-  validates :day, presence: true
+  validates :day, :start_time, :end_time, presence: true
   validates :day, inclusion: { in: AUTORIZED_DAYS }
 
-  # validate :start_hour_is_before_end_hour
+  validate :start_hour_is_before_end_hour
   validate :slot_is_not_overlapping_with_other_slots
 
   def self.days
@@ -32,8 +32,6 @@ class Slot < ApplicationRecord
   end
 
   def start_hour_is_before_end_hour
-    return unless start_hour && end_hour
-
-    errors.add(:start_hour, 'must be before end hour') if start_hour > end_hour
+    errors.add(:start_time, 'must be before end hour') if start_time >= end_time
   end
 end
