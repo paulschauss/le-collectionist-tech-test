@@ -10,7 +10,7 @@ class Slot < ApplicationRecord
   validates :day, inclusion: { in: AUTORIZED_DAYS }
 
   # validate :start_hour_is_before_end_hour
-  # validate :slot_is_not_overlapping_with_other_slots
+  validate :slot_is_not_overlapping_with_other_slots
 
   def self.days
     today_index = AUTORIZED_DAYS.find_index(Time.now.strftime('%A'))
@@ -24,9 +24,10 @@ class Slot < ApplicationRecord
     return if shop.slots.empty?
 
     shop.slots.each do |slot|
-      if slot.day == day && (start_hour..end_hour).overlaps?(slot.start_hour..slot.end_hour)
-        errors.add(:start_hour, 'Slot is overlapping with another slot')
-      end
+      next if slot.day != day
+
+      (start_time..end_time).overlaps?(slot.start_time..slot.end_time)
+      errors.add(:start_time, 'Slot is overlapping with another slot')
     end
   end
 
