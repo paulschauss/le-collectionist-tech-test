@@ -13,37 +13,21 @@ RSpec.describe Slot, type: :model do
     expect(slot).to_not be_valid
   end
 
-  it 'should have a start_hour' do
-    slot = FactoryBot.build(:slot, start_hour: nil)
-    expect(slot).to_not be_valid
+  it 'should have a start_time and a end_time' do
+    slot_start = FactoryBot.build(:slot, start_time: nil)
+    slot_end = FactoryBot.build(:slot, end_time: nil)
+    expect(slot_start && slot_end).to_not be_valid
   end
 
-  it 'should have a start_minute' do
-    slot = FactoryBot.build(:slot, start_minute: nil)
-    expect(slot).to_not be_valid
-  end
-
-  it 'should have a end_hour' do
-    slot = FactoryBot.build(:slot, end_hour: nil)
-    expect(slot).to_not be_valid
-  end
-
-  it 'should have a end_minute' do
-    slot = FactoryBot.build(:slot, end_minute: nil)
-    expect(slot).to_not be_valid
-  end
-
-  it 'should have a start_hour before end_hour' do
-    slot = FactoryBot.build(:slot, start_hour: 12, end_hour: 9)
+  it 'should have a start_time before a end_time' do
+    slot = FactoryBot.build(:slot, start_time: '12:00', end_time: '9:00')
     expect(slot).to_not be_valid
   end
 
   it 'should not overlap with other slots' do
     shop = FactoryBot.create(:shop)
-    slot = FactoryBot.create(:slot, shop:)
-    slot2 = FactoryBot.build(:slot, shop:, day: slot.day, start_hour: slot.start_hour,
-                                    start_minute: slot.start_minute,
-                                    end_hour: slot.end_hour, end_minute: slot.end_minute)
-    expect(slot2).to_not be_valid
+    slot = FactoryBot.create(:slot, shop: shop)
+    slot_overlapping = FactoryBot.build(:slot, shop: shop, day: slot.day, start_time: slot.start_time, end_time: slot.end_time)
+    expect(slot_overlapping).to_not be_valid
   end
 end
