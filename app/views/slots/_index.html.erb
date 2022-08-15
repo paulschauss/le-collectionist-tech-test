@@ -1,7 +1,6 @@
 <ul>
   <% Slot.days.each_with_index do |day, index| %>
     <% slots_by_day = Slot.where(day: day) %>
-    <%= raise %>
     <li class="<%= 'fw-bold' if index == 0 %>">
       <div class="row d-flex flex-row p-3 border bg-light justify-content-between">
         <%= t "date.#{day.downcase}", class: "col-4" %>
