@@ -4,7 +4,8 @@
     <li class="<%= 'fw-bold' if index == 0 %>">
       <div class="row d-flex flex-row p-3 border bg-light justify-content-between">
         <%= t "date.#{day.downcase}", class: "col-4" %>
-        <div class="col-11">
+        <%=  %>
+        <div class="col-11 <%= day %>">
           <% if slots_by_day_and_shop.any? %>
             <% slots_by_day_and_shop.each_with_index do |slot, index| %>
               <%= ", " if index != 0 %><%= display_slot(slot) %>
