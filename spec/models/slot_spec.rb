@@ -26,8 +26,9 @@ RSpec.describe Slot, type: :model do
 
   it 'should not overlap with other slots' do
     shop = FactoryBot.create(:shop)
-    slot = FactoryBot.create(:slot, shop: shop)
-    slot_overlapping = FactoryBot.build(:slot, shop: shop, day: slot.day, start_time: slot.start_time, end_time: slot.end_time)
+    slot = FactoryBot.create(:slot, shop:)
+    slot_overlapping = FactoryBot.build(:slot, shop:, day: slot.day, start_time: slot.start_time,
+                                               end_time: slot.end_time)
     expect(slot_overlapping).to_not be_valid
   end
 end

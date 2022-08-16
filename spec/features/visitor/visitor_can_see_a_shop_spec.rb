@@ -5,17 +5,17 @@ require 'rails_helper'
 feature 'visitor' do
   before do
     shop = FactoryBot.create(:shop, name: 'Le Collectionist')
-    FactoryBot.create(:slot, shop: shop, day: 'Saturday', start_time: '10:30', end_time: '20:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Monday', start_time: '10:30', end_time: '12:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Monday', start_time: '17:00', end_time: '20:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Tuesday', start_time: '10:30', end_time: '12:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Tuesday', start_time: '17:00', end_time: '20:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Wednesday', start_time: '10:30', end_time: '12:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Wednesday', start_time: '17:00', end_time: '20:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Thursday', start_time: '10:30', end_time: '12:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Thursday', start_time: '17:00', end_time: '20:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Friday', start_time: '10:30', end_time: '12:00')
-    FactoryBot.create(:slot, shop: shop, day: 'Friday', start_time: '17:00', end_time: '20:00')
+    FactoryBot.create(:slot, shop:, day: 'Saturday', start_time: '10:30', end_time: '20:00')
+    FactoryBot.create(:slot, shop:, day: 'Monday', start_time: '10:30', end_time: '12:00')
+    FactoryBot.create(:slot, shop:, day: 'Monday', start_time: '17:00', end_time: '20:00')
+    FactoryBot.create(:slot, shop:, day: 'Tuesday', start_time: '10:30', end_time: '12:00')
+    FactoryBot.create(:slot, shop:, day: 'Tuesday', start_time: '17:00', end_time: '20:00')
+    FactoryBot.create(:slot, shop:, day: 'Wednesday', start_time: '10:30', end_time: '12:00')
+    FactoryBot.create(:slot, shop:, day: 'Wednesday', start_time: '17:00', end_time: '20:00')
+    FactoryBot.create(:slot, shop:, day: 'Thursday', start_time: '10:30', end_time: '12:00')
+    FactoryBot.create(:slot, shop:, day: 'Thursday', start_time: '17:00', end_time: '20:00')
+    FactoryBot.create(:slot, shop:, day: 'Friday', start_time: '10:30', end_time: '12:00')
+    FactoryBot.create(:slot, shop:, day: 'Friday', start_time: '17:00', end_time: '20:00')
     visit shops_path
     click_on 'Le Collectionist'
   end
