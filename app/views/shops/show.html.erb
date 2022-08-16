@@ -2,25 +2,7 @@
   <%= t ".name_shop_html", name: @shop.name %>
 </h1>
 <h3><%= t ".shopping_hours" %>:</h3>
-<ul>
-  <% Slot.days.each_with_index do |day, index| %>
-    <% slots_by_day = Slot.where(day: day) %>
-    <li class="<%= 'fw-bold' if index == 0 %>">
-    <div class="row d-flex flex-row p-3 border bg-light justify-content-between">
-      <%= t "date.#{day.downcase}", class: "col-4" %>
-      <div class="col-11">
-        <% slots_by_day = @shop.slots.where(day: day) %>
-        <% if slots_by_day.any? %>
-          <% slots_by_day.each_with_index do |slot, index| %>
-            <%= ", " if index != 0 %><%= display_slot(slot) %>
-          <% end %>
-        <% else %>
-          <%= t ".no_slots" %>
-        <% end %>
-      </div>
-    </div>
-    </li>
-  <% end %>
-</ul>
+
+<%= render partial: 'slots/index', locals: {shop: @shop} %>
 
 <%= link_to t("back"), shops_path, class: "btn btn-primary" %>
