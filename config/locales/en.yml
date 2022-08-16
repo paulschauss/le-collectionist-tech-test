@@ -28,6 +28,7 @@ en:
         star_time: "Start hour"
         end_time: "End hour"
         day: "Day"
+  no_slots: "Closed"
   shops:
     index:
       title: "Here is the list of shop"
@@ -37,7 +38,6 @@ en:
       name_shop_html: "<strong>Name shop:</strong> %{name}"
       shopping_hours: "Shopping hours"
       slots: "Slots"
-      no_slots: "Closed"
     new:
       title: "Create a new shop"
       subtitle_html: "<em>-Don't lie, you first gone on Le Collectionist Show ? If i am Right, you have to make a pun in your shop name !<em>"
@@ -46,5 +46,4 @@ en:
     new:
       title: "Create a new slot for the shop : %{name}"
       slots: "Slots"
-      no_slots: "Closed"
       see_my_shop: "See my shop"
