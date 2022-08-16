@@ -21,6 +21,7 @@ en:
         star_time: "Start hour"
         end_time: "End hour"
         day: "Day"
+  no_slots: "Closed"
   shops:
     index:
       title: "Here is the list of shop"
@@ -39,5 +40,4 @@ en:
     new:
       title: "Create a new slot for the shop : %{name}"
       slots: "Slots"
-      no_slots: "Closed"
       see_my_shop: "See my shop"

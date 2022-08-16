@@ -21,6 +21,7 @@ fr:
         start_time: "Temps de début"
         end_time: "Temps de fin"
         day: "Jour"
+  no_slots: "Fermé"
   shops:
     index:
       title: "Voici la liste des magasins"
