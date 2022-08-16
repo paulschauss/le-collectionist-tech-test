@@ -12,6 +12,13 @@ fr:
     friday: "Vendredi"
     saturday: "Samedi"
   activerecord:
+    errors:
+      models:
+        slot:
+          attributes:
+            start_time:
+              start_before_end: "doit être avant la fin du créneau"
+              slot_overlapping: ": le créneau est en conflit avec un autre créneau"
     models:
       shop: "Magasin"
     attributes:
