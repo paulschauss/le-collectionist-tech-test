@@ -31,7 +31,6 @@ fr:
       name_shop_html: "<strong>Nom du magasin:</strong> %{name}"
       shopping_hours: "Horaires du magasin"
       slots: "Créneaux"
-      no_slots: "Fermé"
     new:
       title: "Créer un nouveau magasin"
       subtitle_html: "<em>-Ne mentez pas, vous avez commencé par aller sur la show Le Collectionist ? Si j'ai raison, vous devez faire un jeu de mot dans le nom du magasin !<em>"
@@ -40,5 +39,4 @@ fr:
     new:
       title: "Créer un nouveau créneau pour le magasin : %{name}"
       slots: "Créneaux"
-      no_slots: "Fermé"
       see_my_shop: "Voir mon magasin"
