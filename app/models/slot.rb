@@ -27,11 +27,11 @@ class Slot < ApplicationRecord
       next if slot.day != day
 
       (start_time..end_time).overlaps?(slot.start_time..slot.end_time)
-      errors.add(:start_time, 'Slot is overlapping with another slot')
+      errors.add(:start_time, :slot_overlapping)
     end
   end
 
   def start_hour_is_before_end_hour
-    errors.add(:start_time, 'must be before end hour') if start_time >= end_time
+    errors.add(:start_time, :start_before_end) if start_time >= end_time
   end
 end

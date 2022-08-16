@@ -12,6 +12,13 @@ en:
     friday: "Friday"
     saturday: "Saturday"
   activerecord:
+    errors:
+      models:
+        slot:
+          attributes:
+            start_time:
+              start_before_end: "must be before the end time"
+              slot_overlapping: ": the slot is overlapping with another slot"
     models:
       shop: "Shop"
     attributes:
