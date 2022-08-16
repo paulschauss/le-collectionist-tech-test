@@ -12,6 +12,13 @@ fr:
     friday: "Vendredi"
     saturday: "Samedi"
   activerecord:
+    errors:
+      models:
+        slot:
+          attributes:
+            start_time:
+              start_before_end: "doit être avant la fin du créneau"
+              slot_overlapping: ": le créneau est en conflit avec un autre créneau"
     models:
       shop: "Magasin"
     attributes:
@@ -21,6 +28,7 @@ fr:
         start_time: "Temps de début"
         end_time: "Temps de fin"
         day: "Jour"
+  no_slots: "Fermé"
   shops:
     index:
       title: "Voici la liste des magasins"
@@ -30,7 +38,6 @@ fr:
       name_shop_html: "<strong>Nom du magasin:</strong> %{name}"
       shopping_hours: "Horaires du magasin"
       slots: "Créneaux"
-      no_slots: "Fermé"
     new:
       title: "Créer un nouveau magasin"
       subtitle_html: "<em>-Ne mentez pas, vous avez commencé par aller sur la show Le Collectionist ? Si j'ai raison, vous devez faire un jeu de mot dans le nom du magasin !<em>"
@@ -39,5 +46,4 @@ fr:
     new:
       title: "Créer un nouveau créneau pour le magasin : %{name}"
       slots: "Créneaux"
-      no_slots: "Fermé"
       see_my_shop: "Voir mon magasin"
