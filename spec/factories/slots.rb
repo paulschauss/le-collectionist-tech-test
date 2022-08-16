@@ -4,9 +4,7 @@ FactoryBot.define do
   factory :slot do
     shop
     day { 'Monday' }
-    start_hour { 9 }
-    start_minute { 0 }
-    end_hour { 12 }
-    end_minute { 30 }
+    start_time { '9:00' }
+    end_time { '12:00' }
   end
 end

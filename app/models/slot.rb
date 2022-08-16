@@ -32,6 +32,8 @@ class Slot < ApplicationRecord
   end
 
   def start_hour_is_before_end_hour
+    return unless start_time && end_time
+
     errors.add(:start_time, :start_before_end) if start_time >= end_time
   end
 end

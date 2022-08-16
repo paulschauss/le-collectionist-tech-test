@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :shop do
-    name { 'Le Collectionist' }
+    sequence(:name) { |n| "Le Collectionist #{n}" }
   end
 end
