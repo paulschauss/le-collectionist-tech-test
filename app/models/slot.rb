@@ -24,10 +24,10 @@ class Slot < ApplicationRecord
     return if shop.slots.empty?
 
     shop.slots.each do |slot|
-      next if slot.day != day
-
-      (start_time..end_time).overlaps?(slot.start_time..slot.end_time)
-      errors.add(:start_time, :slot_overlapping)
+      if slot.day == day && (date_to_now(start_time)..date_to_now(end_time)).overlaps?(date_to_now(slot.start_time)..date_to_now(slot.end_time))
+        errors.add(:start_time, 'Slot is overlapping with another slot')
+        break
+      end
     end
   end
 
@@ -35,5 +35,9 @@ class Slot < ApplicationRecord
     return unless start_time && end_time
 
     errors.add(:start_time, :start_before_end) if start_time >= end_time
+  end
+
+  def date_to_now(time)
+    time.strftime('%H:%M').to_time
   end
 end
